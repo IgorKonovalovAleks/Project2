@@ -1,39 +1,36 @@
-#include "Vector.h"
+#include "Matrix.h"
 #include<cstdio>
 
 int main() {
+	/*
+	MyVector v(5);
+	v[1] = 7.5;
+	v[4] = 1;
 
-	Vector v(3);
-	v[0] = 3;
-	v[1] = 4;
-	v[2] = 1.1;
+	MyVector a = v;
+	a[2] = 4;
 
-	Vector a(3);
-	a[0] = -3.9;
-	a[1] = 7;
-	a[2] = -9;
-
-	a.print();
-
-	printf("\n");
 	v.print();
-	printf("\n");
-
-	(a + v).print();
-	printf("\n");
-
-	a += v;
 	a.print();
-	printf("\n");
 
-	a *= 5;
+	printf("%lf\n\n", a.popBack());
 	a.print();
-	printf("\n");
-
-
-	printf("%lf\n", a.dot(v));
-	printf("%lf\n", a.getNorm());
-
+	
+	MyVector b(1);
+	b[0] = 4;
+	b.print();
+	b.pushBack(3);
+	b.print();
+	b.pushBack(1);
+	b.print();
+	*/
+	Matrix a(3, 2);
+	Matrix m(2, 3);
+	m[1][0] = 3;
+	a[1][1] = 6;
+	
+	Matrix r(a * m);
+	r.print();
 
 	return 0;
 }

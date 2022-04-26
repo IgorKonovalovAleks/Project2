@@ -139,9 +139,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Conductor.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="Musician.cpp" />
+    <ClCompile Include="myVector.cpp" />
+    <ClCompile Include="Orchestra.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="Vector.h" />
+    <ClCompile Include="Violinist.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Conductor.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="Musician.h" />
+    <ClInclude Include="myVector.h" />
+    <ClInclude Include="Orchestra.h" />
+    <ClInclude Include="Violinist.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

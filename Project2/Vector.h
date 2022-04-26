@@ -1,6 +1,8 @@
 #pragma once
 #include <cstdio>
 
+
+
 class Vector {
 private:
 
@@ -13,8 +15,6 @@ public:
 	Vector(int len);
 	Vector(const Vector& v);
 	~Vector();
-
-
 
 	int getLength() const;
 	void resize(int nSize);
@@ -36,6 +36,7 @@ public:
 
 	double& operator[](int i);
 	double operator[](int i) const;
+
 
 	void print() const;
 

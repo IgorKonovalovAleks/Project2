@@ -157,7 +157,7 @@ double Vector::dot(const Vector& v) const {
 void Vector::print() const {
 
 	for (int i = 0; i < n; i++) {
-		printf("%lf\n", d[i]);
+		printf("%lf ", d[i]);
 	}
 
 
@@ -175,4 +175,6 @@ void Vector::setVal(int i, double val) {
 double Vector::getNorm() const {
 	return sqrt(this->dot(*this));
 }
+
+
 
