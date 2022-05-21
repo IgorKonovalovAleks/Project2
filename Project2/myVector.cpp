@@ -66,15 +66,14 @@ void MyVector::resize(int nSize) {
 	}
 	else {
 		double* v = new double[nSize * CAPACITY_FACTOR];
-		
+		n = nSize;
 		for (int i = 0; i < n; i++) {
 			v[i] = d[i];
 		}
 
 		delete[] d;
 		d = v;
-
-		n = nSize;
+		
 		capacity = nSize * CAPACITY_FACTOR;
 
 	}
@@ -88,9 +87,8 @@ void MyVector::pushBack(double a) {
 		n += 1;
 	}
 	else {
-		this->resize(n + 1);
-		printf("%d", n);
-		d[n] = a;
+		resize(n + 1);
+		d[n - 1] = a;
 	}
 
 
@@ -111,8 +109,9 @@ double MyVector::popBack() {
 
 void MyVector::print() const {
 	for (int i = 0; i < n; i++) {
-		printf("%lf\n", d[i]);
+		printf("%lf ", d[i]);
 	}
+	printf("\n");
 
 
 }

@@ -146,12 +146,13 @@ Matrix Matrix::operator*(const Matrix& m) const {
 			for (int j = 0; j < m.cl; j++) {
 
 				for (int k = 0; k < cl; k++) {
-					r[i][j] += d[i][k] * d[k][j];
+					r[i][j] += d[i][k] * m.d[k][j];
 				}
 
 
 			}
 		}
+		return r;
 	}
 
 

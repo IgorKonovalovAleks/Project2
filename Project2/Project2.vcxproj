@@ -139,15 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Conductor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Matrix.cpp" />
-    <ClCompile Include="Musician.cpp" />
     <ClCompile Include="myVector.cpp" />
-    <ClCompile Include="Orchestra.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="Vector.h" />
-    <ClCompile Include="Violinist.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Conductor.h" />
