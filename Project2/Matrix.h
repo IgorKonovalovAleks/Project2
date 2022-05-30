@@ -29,8 +29,6 @@ public:
 	Matrix operator*(double c) const;
 	Matrix operator*(const Matrix& m) const;
 
-	friend Matrix operator*(double a, Matrix c);
-
 	Matrix& operator+=(const Matrix& m);
 	Matrix& operator= (const Matrix& m);
 	Matrix& operator-=(const Matrix& m);
