@@ -30,6 +30,9 @@ public:
 
 	Vector operator*(double c) const;
 	Vector& operator*=(double c);
+	friend Vector operator*(double a, Vector c);
+
+
 	double getNorm() const;
 
 	double dot(const Vector& v) const;

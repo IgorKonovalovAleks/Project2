@@ -146,12 +146,8 @@
     <ClCompile Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Conductor.h" />
     <ClInclude Include="Matrix.h" />
-    <ClInclude Include="Musician.h" />
     <ClInclude Include="myVector.h" />
-    <ClInclude Include="Orchestra.h" />
-    <ClInclude Include="Violinist.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

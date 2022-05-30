@@ -2,7 +2,6 @@
 #include <cstdlib>
 #include <cstdio>
 
-
 Vector::Vector() {
 	d = new double[0];
 
@@ -176,5 +175,14 @@ double Vector::getNorm() const {
 	return sqrt(this->dot(*this));
 }
 
+
+Vector operator*(double a, Vector c) {
+	Vector r(c.n);
+	for (int i = 0; i < c.n; i++) {
+		r[i] = c[i] * a;
+	}
+
+	return r;
+}
 
 

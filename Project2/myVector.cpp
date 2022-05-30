@@ -2,8 +2,20 @@
 
 
 
+void MyVector::insert(int idx, double val) {
+	resize(n + 1);
+	for (int i = n; i > idx; i--) {
+		d[i] = d[i - 1];
+	}
+	d[idx] = val;
+}
 
-
+void MyVector::erase(int idx) {
+	for (int i = idx; i < n - 1; i++) {
+		d[i] = d[i + 1];
+	}
+	resize(n - 1);
+}
 
 MyVector::MyVector() {
 	d = new double[0];
@@ -66,11 +78,14 @@ void MyVector::resize(int nSize) {
 	}
 	else {
 		double* v = new double[nSize * CAPACITY_FACTOR];
-		n = nSize;
+		
 		for (int i = 0; i < n; i++) {
 			v[i] = d[i];
 		}
-
+		for (int i = n; i < nSize; i++) {
+			v[i] = 0;
+		}
+		n = nSize;
 		delete[] d;
 		d = v;
 		

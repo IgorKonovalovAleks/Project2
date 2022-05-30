@@ -4,16 +4,17 @@
 
 int main() {
 	
-
+	
 	Vector o(4);
 	o[0] = 1;
 	o[1] = 2;
 	o[3] = 5;
 	Vector f(4);
-	f[0] = 3;
-	f[3] = 7;
+	f = 3 * o;
+	f = o * 2;
 	printf("%lf\n", o.dot(f));
-
+	f.print();
+	
 
 
 
@@ -33,6 +34,7 @@ int main() {
 	v.print();
 	c.print();
 
+
 	printf("%lf\n\n", c.popBack());
 	c.print();
 	
@@ -43,7 +45,17 @@ int main() {
 	b.print();
 	b.pushBack(1);
 	b.print();
-	
+	b.insert(1, 3);
+	b.print();
+	b.erase(2);
+	b.print();
+
+	MyVector w(2);
+	w.print();
+	w.resize(5);
+
+	w.print();
+
 	printf("\nMATRIX\n");
 	Matrix a(2, 3);
 	Matrix m(3, 2);

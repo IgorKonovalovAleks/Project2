@@ -27,6 +27,9 @@ public:
 	double& operator[](int i);
 	double operator[](int i) const;
 
+	void insert(int idx, double val);
+	void erase(int idx);
+
 
 	void print() const;
 

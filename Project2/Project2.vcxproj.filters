@@ -38,17 +38,5 @@
     <ClInclude Include="Matrix.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="Musician.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Violinist.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Conductor.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Orchestra.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
