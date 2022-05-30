@@ -173,3 +173,13 @@ void Matrix::print() const {
 }
 
 
+Matrix operator*(double a, Matrix c) {
+
+	Matrix r(c.rw, c.cl);
+	for (int i = 0; i < c.rw; i++) {
+		r[i] = c[i] * a;
+	}
+
+	return r;
+
+}
