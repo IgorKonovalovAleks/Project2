@@ -19,6 +19,8 @@ public:
 	Matrix(const Matrix& m);
 	~Matrix();
 
+	int getRw();
+	int getCl();
 	void resize(int newRw, int newCl);
 
 	Vector& operator[](int i);

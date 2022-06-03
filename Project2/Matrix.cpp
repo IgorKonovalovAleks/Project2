@@ -33,6 +33,14 @@ Matrix::~Matrix() {
 	delete[] d;
 }
 
+int Matrix::getRw() {
+	return rw;
+}
+
+int Matrix::getCl() {
+	return cl;
+}
+
 Vector& Matrix::operator[](int i) {
 	return d[i];
 }

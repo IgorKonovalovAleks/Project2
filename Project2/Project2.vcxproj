@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GaussSolver.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="myVector.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GaussSolver.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="myVector.h" />
   </ItemGroup>

@@ -30,6 +30,9 @@
     <ClCompile Include="Matrix.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="GaussSolver.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myVector.h">
@@ -37,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="Matrix.h">
       <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="GaussSolver.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
