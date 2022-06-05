@@ -65,7 +65,7 @@ std::vector<Vector> GaussSolver::solve(const Matrix& Mat, const Vector& Sc) {
 	Vector is_base(A.getCl());
 
 	for (int i = 0; i < A.getCl(); i++) {
-		is_base[i] = 0;
+		is_base[i] = -1;
 	}
 	for (int i = 0; i < A.getRw(); i++) {
 		allowed_i[i] = 1;
@@ -86,7 +86,7 @@ std::vector<Vector> GaussSolver::solve(const Matrix& Mat, const Vector& Sc) {
 
 		if (A[i][j] != 0) {
 			exclude_column(A, b, i, j);
-			is_base[j] = 1;
+			is_base[j] = i;
 		}
 		else
 			break;
@@ -117,27 +117,51 @@ std::vector<Vector> GaussSolver::solve(const Matrix& Mat, const Vector& Sc) {
 	}
 	rank -= null_rows;
 
-	//printf("\nrank %d\n", rank);
-	std::vector<Vector> result;
-	Vector col(A.getRw());
-	result.push_back(b);
-	if (rank < A.getCl()) {
-		for (i = 0; i < A.getCl(); i++) {
-			if (is_base[i] == 0) {
-				for (int j = 0; j < col.getLength(); j++)
-					col[j] = A[j][i]  == 0 ? 0 : -1 * A[j][i];
-				result.push_back(col);
-			}
-		}
+	printf("\nrank %d\n", rank);
+	Vector col(A.getCl());
+	std::vector<Vector> res;
+
+	//calculate shift
+	for (int a = 0; a < col.getLength(); a++) {
+		if (is_base[a] == -1)
+			col[a] = 0;
+		else
+			col[a] = b[is_base[a]];
 	}
-	/*
+
+	res.push_back(col);
+
+
+	//repeat for every free x
+	for (int z = 0; z < A.getCl(); z++) {
+		if (is_base[z] == -1) {
+			for (int a = 0; a < col.getLength(); a++) {
+
+				if (a == z)
+					col[a] = 1;
+
+				else if (is_base[a] == -1)
+					col[a] = 0;
+
+				else
+					col[a] = A[is_base[a]][z] == 0 ? 0 : -A[is_base[a]][z];
+
+
+			}
+
+			res.push_back(col);
+
+		}
+
+	}
+	
 	printf("\nMatrix:\n");
 	A.print();
 	b.print();
 	
 	printf("\n");
-	*/
-	return result;
+	
+	return res;
 
 }
 
