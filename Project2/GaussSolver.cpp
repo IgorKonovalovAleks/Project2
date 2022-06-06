@@ -1,7 +1,7 @@
 #include "GaussSolver.h"
 
 
-
+const double ZERO = 0.00000000000001;
 
 GaussSolver::GaussSolver() {}
 
@@ -84,8 +84,12 @@ std::vector<Vector> GaussSolver::solve(const Matrix& Mat, const Vector& Sc) {
 		
 		rank++;
 
-		if (A[i][j] != 0) {
+		if (abs(A[i][j]) > ZERO) {
+			printf("%lf\n", A[i][j]);
 			exclude_column(A, b, i, j);
+			A.print();
+			b.print();
+			printf("\n\n");
 			is_base[j] = i;
 		}
 		else
