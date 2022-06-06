@@ -106,12 +106,12 @@ std::vector<Vector> GaussSolver::solve(const Matrix& Mat, const Vector& Sc) {
 	for (i = 0; i < A.getRw(); i++) {
 		bool f = true;
 		for (j = 0; j < A.getCl(); j++) {
-			if (A[i][j] != 0) {
+			if (abs(A[i][j]) > ZERO) {
 				f = false;
 				break;
 			}
 		}
-		if (f && b[i] != 0) {              //no solutions
+		if (abs(f && b[i]) > ZERO) {              //no solutions
 			return std::vector<Vector>();
 		} 
 		else if (f) {
