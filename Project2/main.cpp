@@ -31,25 +31,25 @@ int main() {
 	m[1][0] = 3; m[1][1] = -7; m[1][2] = -1;
 	m[2][0] = -2; m[2][1] = 9; m[2][2] = 4;
 	
-	m.print();
+	//m.print();
 
 	Vector b(3);
 	b[0] = 6;
 	b[1] = 1;
 	b[2] = -2;
-	b.print();
-	printf("\n");
+	//b.print();
+	//printf("\n");
 
 	GaussSolver solver;
 	std::vector<Vector> res = solver.solve(m, b);
 
 
 	
-	std::cout << "\n";
-	for (Vector v : res) {
-		v.print();
-		std::cout << "\n";
-	}
+	//std::cout << "\n";
+	//for (Vector v : res) {
+	//	v.print();
+	//	std::cout << "\n";
+	//}
 	
 
 	/*

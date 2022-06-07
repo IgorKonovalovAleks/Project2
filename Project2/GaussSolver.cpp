@@ -85,11 +85,11 @@ std::vector<Vector> GaussSolver::solve(const Matrix& Mat, const Vector& Sc) {
 		rank++;
 
 		if (abs(A[i][j]) > ZERO) {
-			printf("%lf\n", A[i][j]);
+			//printf("%lf\n", A[i][j]);
 			exclude_column(A, b, i, j);
-			A.print();
-			b.print();
-			printf("\n\n");
+			//A.print();
+			//b.print();
+			//printf("\n\n");
 			is_base[j] = i;
 		}
 		else
@@ -111,7 +111,7 @@ std::vector<Vector> GaussSolver::solve(const Matrix& Mat, const Vector& Sc) {
 				break;
 			}
 		}
-		if (abs(f && b[i]) > ZERO) {              //no solutions
+		if (f && abs(b[i]) > ZERO) {              //no solutions
 			return std::vector<Vector>();
 		} 
 		else if (f) {
@@ -121,7 +121,7 @@ std::vector<Vector> GaussSolver::solve(const Matrix& Mat, const Vector& Sc) {
 	}
 	rank -= null_rows;
 
-	printf("\nrank %d\n", rank);
+	//printf("\nrank %d\n", rank);
 	Vector col(A.getCl());
 	std::vector<Vector> res;
 
@@ -159,9 +159,9 @@ std::vector<Vector> GaussSolver::solve(const Matrix& Mat, const Vector& Sc) {
 
 	}
 	
-	printf("\nMatrix:\n");
-	A.print();
-	b.print();
+	//printf("\nMatrix:\n");
+	//A.print();
+	//b.print();
 	
 	printf("\n");
 	
